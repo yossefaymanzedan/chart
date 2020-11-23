@@ -1,30 +1,40 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700|Source+Sans+Pro:300,400,600,700&display=swap");
+* {
+  outline: none;
+  box-sizing: border-box;
+}
 
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
 
 body {
   font-family: "Source Sans Pro", sans-serif;
-background-color: #272a3a;
+
   color: #000000;
 }
 
 .container-fluid {
   /*
   background-color: #151728; */
-  width: 100%;
+  background-color: #F6F6F8;
   display: flex;
- 
+  max-width: 1600px;
   height: 100vh;
   overflow: hidden;
-  
+  margin: 0 auto;
 }
 
 .left-side {
   width: 260px;
-margin-left: -130px;
+  border-right: 1px solid #272a3a;
   display: flex;
   flex-direction: column;
   transition: 0.3s;
-  background-color: #272a3a;
-  
+  background-color: #F6F6F8;
+  overflow: auto;
+  flex-shrink: 0;
 }
 @media screen and (max-width: 930px) {
   .left-side.active {
@@ -63,9 +73,8 @@ margin-left: -130px;
   flex-shrink: 0;
   margin-left: auto;
   overflow: auto;
-background-color: #272a3a;
+background-color: #F6F6F8;
   display: flex;
-  color: white;
   flex-direction: column;
 }
 @media screen and (max-width: 1210px) {
@@ -87,13 +96,13 @@ background-color: #272a3a;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  background-color: #000000;
+  background-color: #F6F6F8;
 }
 
 .logo {
   font-family: "DM Sans", sans-serif;
   font-size: 15px;
-  color: #272a3a;
+  color: #000000;
   font-weight: 600;
   text-align: center;
   height: 68px;
@@ -101,7 +110,7 @@ background-color: #272a3a;
   letter-spacing: 4px;
   position: sticky;
   top: 0;
-  background: #272a3a;
+  background: #F6F6F8;
 }
 
 .side-title {
@@ -181,7 +190,7 @@ background-color: #272a3a;
   transition: 0.3s;
   padding: 0 20px;
   align-items: center;
-  background-color: #272727;
+  background-color: #F6F6F8;
   width: 100%;
   height: 100%;
 }
@@ -196,7 +205,7 @@ background-color: #272a3a;
 
 .search-bar {
   height: 60px;
-  background-color: #272a3a;
+  background-color: #F6F6F8;
   z-index: 3;
   position: relative;
 }
@@ -223,7 +232,7 @@ background-color: #272a3a;
   padding: 20px;
   flex-grow: 1;
   overflow: auto;
-  background-color: #272a3abe;
+  background-color: #F6F6F8;
 }
 
 .profile {
@@ -276,11 +285,10 @@ background-color: #272a3a;
 
 }
 .men1 {
-  background-color: #151728;
-  padding-top: 5px;
-  padding-left: 5px;
- border-bottom: 2px solid darkgoldenrod;
- padding-bottom: 7.5px;
+  font-weight: 900;
+  color: green;
+  background: #151728;
+padding: 5px;
 }
 .profile-menu-link.active, .profile-menu-link:hover {
   color: #000000;
@@ -343,7 +351,7 @@ background-color: #272a3a;
 }
 
 .box {
-  background-color: #272a3a;
+  background-color: #F6F6F8;
   border-radius: 4px;
 }
 
@@ -360,14 +368,14 @@ background-color: #272a3a;
   margin-bottom: 20px;
 }
 .intro-menu {
-  background-color: #272a3a2d;
+  background-color: #F6F6F8;
   
   width: 5px;
   height: 5px;
   border: 0;
   padding: 0;
   border-radius: 50%;
- 
+  margin-left: auto;
   margin-right: 8px;
 }
 
@@ -430,7 +438,7 @@ background-color: #272a3a;
   font-size: 22px;
   font-weight: 600;
   font-family: "DM Sans", sans-serif;
-  background-color: #272a3a;
+  background-color: #F6F6F8;
   padding: 6px 0;
   text-align: center;
 }
@@ -708,7 +716,7 @@ background-color: #272a3a;
   align-items: center;
   position: sticky;
   top: 0;
-  background-color: #272a3a;
+  background-color: #F6F6F8;
   z-index: 3;
   flex-shrink: 0;
 }
@@ -779,7 +787,7 @@ background-color: #272a3a;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #272a3a;
+  background-color: #F6F6F8;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -801,7 +809,7 @@ background-color: #272a3a;
   height: 100%;
   border: 0;
   width: 52px;
-  background-color: #272a3a;
+  background-color: #F6F6F8;
   border-left: 1px solid #272a3a;
   color: #000000;
   display: none;
@@ -968,14 +976,13 @@ body {
 .chart__axis line {
   fill: none;
   stroke: var(--chartAxisColor);
-  stroke-width: 3px;
+  stroke-width: var(--chartAxisStrokeWidth);
 }
 
 .chart__line {
-
   fill: none;
-  stroke: #1488fa;
-  stroke-width: 5px;
+  stroke: var(--chartLineColor);
+  stroke-width: var(--chartLineStrokeWidth);
 }
 
 /* image.css */
