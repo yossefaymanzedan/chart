@@ -1,40 +1,30 @@
-@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700|Source+Sans+Pro:300,400,600,700&display=swap");
-* {
-  outline: none;
-  box-sizing: border-box;
-}
 
-html {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-}
 
 body {
   font-family: "Source Sans Pro", sans-serif;
-
+background-color: #272a3a;
   color: #000000;
 }
 
 .container-fluid {
   /*
   background-color: #151728; */
-  background-color: #F6F6F8;
+  width: 100%;
   display: flex;
-  max-width: 1600px;
+ 
   height: 100vh;
   overflow: hidden;
-  margin: 0 auto;
+  
 }
 
 .left-side {
   width: 260px;
-  border-right: 1px solid #272a3a;
+margin-left: -130px;
   display: flex;
   flex-direction: column;
   transition: 0.3s;
-  background-color: #F6F6F8;
-  overflow: auto;
-  flex-shrink: 0;
+  background-color: #272a3a;
+  
 }
 @media screen and (max-width: 930px) {
   .left-side.active {
@@ -73,8 +63,9 @@ body {
   flex-shrink: 0;
   margin-left: auto;
   overflow: auto;
-background-color: #F6F6F8;
+background-color: #272a3a;
   display: flex;
+  color: white;
   flex-direction: column;
 }
 @media screen and (max-width: 1210px) {
@@ -96,13 +87,13 @@ background-color: #F6F6F8;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  background-color: #F6F6F8;
+  background-color: #000000;
 }
 
 .logo {
   font-family: "DM Sans", sans-serif;
   font-size: 15px;
-  color: #000000;
+  color: #272a3a;
   font-weight: 600;
   text-align: center;
   height: 68px;
@@ -110,7 +101,7 @@ background-color: #F6F6F8;
   letter-spacing: 4px;
   position: sticky;
   top: 0;
-  background: #F6F6F8;
+  background: #272a3a;
 }
 
 .side-title {
@@ -190,7 +181,7 @@ background-color: #F6F6F8;
   transition: 0.3s;
   padding: 0 20px;
   align-items: center;
-  background-color: #F6F6F8;
+  background-color: #272727;
   width: 100%;
   height: 100%;
 }
@@ -205,7 +196,7 @@ background-color: #F6F6F8;
 
 .search-bar {
   height: 60px;
-  background-color: #F6F6F8;
+  background-color: #272a3a;
   z-index: 3;
   position: relative;
 }
@@ -232,7 +223,7 @@ background-color: #F6F6F8;
   padding: 20px;
   flex-grow: 1;
   overflow: auto;
-  background-color: #F6F6F8;
+  background-color: #272a3abe;
 }
 
 .profile {
@@ -285,10 +276,11 @@ background-color: #F6F6F8;
 
 }
 .men1 {
-  font-weight: 900;
-  color: green;
-  background: #151728;
-padding: 5px;
+  background-color: #151728;
+  padding-top: 5px;
+  padding-left: 5px;
+ border-bottom: 2px solid darkgoldenrod;
+ padding-bottom: 7.5px;
 }
 .profile-menu-link.active, .profile-menu-link:hover {
   color: #000000;
@@ -351,7 +343,7 @@ padding: 5px;
 }
 
 .box {
-  background-color: #F6F6F8;
+  background-color: #272a3a;
   border-radius: 4px;
 }
 
@@ -368,14 +360,14 @@ padding: 5px;
   margin-bottom: 20px;
 }
 .intro-menu {
-  background-color: #F6F6F8;
+  background-color: #272a3a2d;
   
   width: 5px;
   height: 5px;
   border: 0;
   padding: 0;
   border-radius: 50%;
-  margin-left: auto;
+ 
   margin-right: 8px;
 }
 
@@ -438,7 +430,7 @@ padding: 5px;
   font-size: 22px;
   font-weight: 600;
   font-family: "DM Sans", sans-serif;
-  background-color: #F6F6F8;
+  background-color: #272a3a;
   padding: 6px 0;
   text-align: center;
 }
@@ -716,7 +708,7 @@ padding: 5px;
   align-items: center;
   position: sticky;
   top: 0;
-  background-color: #F6F6F8;
+  background-color: #272a3a;
   z-index: 3;
   flex-shrink: 0;
 }
@@ -787,7 +779,7 @@ padding: 5px;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #F6F6F8;
+  background-color: #272a3a;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -809,7 +801,7 @@ padding: 5px;
   height: 100%;
   border: 0;
   width: 52px;
-  background-color: #F6F6F8;
+  background-color: #272a3a;
   border-left: 1px solid #272a3a;
   color: #000000;
   display: none;
@@ -976,13 +968,14 @@ body {
 .chart__axis line {
   fill: none;
   stroke: var(--chartAxisColor);
-  stroke-width: var(--chartAxisStrokeWidth);
+  stroke-width: 3px;
 }
 
 .chart__line {
+
   fill: none;
-  stroke: var(--chartLineColor);
-  stroke-width: var(--chartLineStrokeWidth);
+  stroke: #1488fa;
+  stroke-width: 5px;
 }
 
 /* image.css */
